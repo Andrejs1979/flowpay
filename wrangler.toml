@@ -1,0 +1,79 @@
+# Cloudflare Workers Configuration
+# FlowPay API Gateway
+
+name = "flowpay-api"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Environment variables (use wrangler secret for sensitive values)
+[vars]
+ENVIRONMENT = "development"
+
+# Development environment
+[env.development]
+name = "flowpay-api-dev"
+vars = { ENVIRONMENT = "development" }
+
+# Staging environment
+[env.staging]
+name = "flowpay-api-staging"
+vars = { ENVIRONMENT = "staging" }
+
+# Production environment
+[env.production]
+name = "flowpay-api"
+vars = { ENVIRONMENT = "production" }
+
+# D1 Database - Settlement Ledger
+[[d1_databases]]
+binding = "DB"
+database_name = "flowpay-ledger"
+database_id = "flowpay-ledger" # Replace with actual D1 database ID
+
+# KV Namespace - Account Vault
+[[kv_namespaces]]
+binding = "VAULT"
+id = "flowpay-vault" # Replace with actual KV namespace ID
+
+# Queues - Webhook Dispatcher
+[[queues.producers]]
+binding = "WEBHOOK_QUEUE"
+queue = "flowpay-webhooks"
+
+[[queues.consumers]]
+queue = "flowpay-webhooks"
+max_batch_size = 10
+max_wait_time = 5
+
+# Analytics Engine (optional)
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+
+# Route configuration for Workers
+# [routes]
+# pattern = "api.flowpay.io/*"
+# zone_name = "flowpay.io"
+
+# CORS configuration for local development
+[dev]
+port = 8787
+local_protocol = "http"
+upstream_protocol = "https"
+
+# Build configuration
+[build]
+command = "npm run build"
+cwd = "."
+watch_dirs = ["src"]
+
+# Secrets (set via: wrangler secret put <NAME>)
+# - PLAID_CLIENT_ID
+# - PLAID_SECRET
+# - PLAID_ENVIRONMENT (sandbox/development/production)
+# - FEDNOW_PARTICIPANT_ID
+# - FEDNOW_PRIVATE_KEY
+# - RTP_PARTICIPANT_ID
+# - RTP_PRIVATE_KEY
+# - WEBHOOK_SIGNING_SECRET
+# - ENCRYPTION_KEY

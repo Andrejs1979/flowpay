@@ -1,0 +1,278 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About FlowPay">
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>About FlowPay</h1>
+        <p class="tagline">The future of bank-to-bank payments</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container">
+        <div class="content-section">
+          <h2>Our Mission</h2>
+          <p>
+            FlowPay is building the payment infrastructure that powers the next generation of financial technology.
+            We believe that every business should have access to instant, affordable, and reliable bank-to-bank payments.
+          </p>
+          <p>
+            By leveraging modern payment rails like FedNow and RTP, we're replacing outdated card networks with
+            infrastructure that's 60% more cost-effective and settles in seconds rather than days.
+          </p>
+        </div>
+
+        <div class="content-section">
+          <h2>The Problem</h2>
+          <p>
+            Today's payment infrastructure is broken. Businesses lose billions annually to high card fees,
+            delayed ACH settlements, and payment failures. The average ACH return rate is 8%, and card
+            networks charge 2.9% + $0.30 per transaction—eroding already thin margins.
+          </p>
+          <p>
+            Worse yet, ACH payments take 3-5 business days to settle, only process on business days,
+            and leave merchants guessing about whether funds will actually arrive.
+          </p>
+        </div>
+
+        <div class="content-section">
+          <h2>Our Solution</h2>
+          <p>
+            FlowPay provides a single, unified API for ACH, FedNow, and RTP payments. Our smart rail
+            selection automatically chooses the optimal payment method based on speed requirements,
+            cost, and recipient bank capabilities.
+          </p>
+          <p>
+            Features include:
+          </p>
+          <ul>
+            <li><strong>Instant settlement</strong> via FedNow and RTP networks</li>
+            <li><strong>60% cost savings</strong> compared to card networks</li>
+            <li><strong>Account verification</strong> via Plaid to reduce returns</li>
+            <li><strong>Request-to-Pay</strong> for guaranteed invoice collection</li>
+            <li><strong>24/7/365 availability</strong>—no more waiting for business days</li>
+            <li><strong>Smart routing</strong> powered by AI for optimal rail selection</li>
+          </ul>
+        </div>
+
+        <div class="content-section">
+          <h2>Technology</h2>
+          <p>
+            FlowPay is built on modern cloud infrastructure designed for reliability, security, and performance.
+          </p>
+          <ul>
+            <li><strong>Cloudflare Workers</strong> for global edge deployment</li>
+            <li><strong>D1 Database</strong> for double-entry settlement ledger</li>
+            <li><strong>Encrypted KV storage</strong> for secure account vault</li>
+            <li><strong>Cloudflare Queues</strong> for reliable webhook delivery</li>
+            <li><strong>Plaid integration</strong> for real-time account verification</li>
+          </ul>
+        </div>
+
+        <div class="content-section">
+          <h2>Target Markets</h2>
+          <p>
+            FlowPay serves businesses that need to move money efficiently and reliably:
+          </p>
+          <ul>
+            <li><strong>B2B Platforms</strong> — Invoicing, supply chain, vendor payments</li>
+            <li><strong>Marketplaces</strong> — Seller payouts, instant disbursements</li>
+            <li><strong>Gig Economy</strong> — Instant worker payouts</li>
+            <li><strong>Insurance</strong> — Claims disbursement</li>
+            <li><strong>Lending</strong> — Loan funding and servicing</li>
+          </ul>
+        </div>
+
+        <div class="content-section">
+          <h2>Roadmap</h2>
+          <div class="roadmap">
+            <div class="roadmap-item">
+              <div class="roadmap-phase">Q1 2026</div>
+              <div class="roadmap-title">Foundation</div>
+              <div class="roadmap-desc">ACH integration, account verification, basic transfers</div>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-phase">Q2 2026</div>
+              <div class="roadmap-title">Instant Rails</div>
+              <div class="roadmap-desc">FedNow and RTP integration, 24/7 availability</div>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-phase">Q3 2026</div>
+              <div class="roadmap-title">Intelligence</div>
+              <div class="roadmap-desc">Smart routing, balance verification, risk scoring</div>
+            </div>
+            <div class="roadmap-item">
+              <div class="roadmap-phase">Q4 2026</div>
+              <div class="roadmap-title">Advanced</div>
+              <div class="roadmap-desc">Request-to-Pay, batch payouts, international expansion</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section cta">
+          <h2>Ready to Get Started?</h2>
+          <p>Join the waitlist and be among the first to experience the future of payments.</p>
+          <a href="/" class="cta-button">Back to Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .hero {
+    padding: 4rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+  }
+
+  .tagline {
+    font-size: 1.25rem;
+    margin: 0;
+    opacity: 0.95;
+  }
+
+  .content {
+    padding: 4rem 0;
+  }
+
+  .content-section {
+    margin-bottom: 4rem;
+  }
+
+  .content-section h2 {
+    font-size: 2rem;
+    margin: 0 0 1.5rem 0;
+    color: #111827;
+  }
+
+  .content-section p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+
+  .content-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .content-section li {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #4b5563;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+  }
+
+  .content-section li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+  }
+
+  .content-section strong {
+    color: #111827;
+  }
+
+  .roadmap {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .roadmap-item {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid #667eea;
+  }
+
+  .roadmap-phase {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+  }
+
+  .roadmap-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.25rem;
+  }
+
+  .roadmap-desc {
+    color: #6b7280;
+    font-size: 1rem;
+  }
+
+  .cta {
+    text-align: center;
+    background: #f9fafb;
+    padding: 3rem;
+    border-radius: 0.75rem;
+  }
+
+  .cta h2 {
+    margin-bottom: 1rem;
+  }
+
+  .cta p {
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background: #667eea;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+
+  .cta-button:hover {
+    background: #5a67d8;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .content-section h2 {
+      font-size: 1.5rem;
+    }
+
+    .content-section p,
+    .content-section li {
+      font-size: 1rem;
+    }
+
+    .cta {
+      padding: 2rem;
+    }
+  }
+</style>

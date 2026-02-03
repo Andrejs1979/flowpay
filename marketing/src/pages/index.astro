@@ -1,0 +1,439 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="FlowPay - Real-Time Bank Payment Infrastructure">
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>FlowPay</h1>
+        <p class="tagline">Real-Time Bank Payment Infrastructure</p>
+        <p class="subtitle">60% better margins than card networks with instant settlement via FedNow, RTP, and ACH</p>
+        <div class="hero-badges">
+          <span class="badge">Instant Settlement</span>
+          <span class="badge">24/7/365</span>
+          <span class="badge">0.5% Fees</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Instant Bank Transfers</h3>
+            <p>Enable true instant money movement via FedNow and RTP networks. Funds arrive in under 10 seconds, 24/7/365.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Smart Rail Selection</h3>
+            <p>AI-powered routing automatically selects the optimal rail based on speed, cost, and recipient bank capabilities.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔐</div>
+            <h3>Account Verification</h3>
+            <p>Real-time verification via Plaid reduces fraud and ACH returns. Optional balance checks before debiting.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📨</div>
+            <h3>Request-to-Pay</h3>
+            <p>Send payment requests customers approve via their banking app. Guaranteed funds with instant settlement.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>60% Cost Savings</h3>
+            <p>Pay 0.5% instead of 2.9% + $0.30. Bank rails offer significantly better margins than card networks.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔗</div>
+            <h3>Single Unified API</h3>
+            <p>One API for ACH, FedNow, and RTP. No need to manage multiple providers or integration points.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+      <div class="container">
+        <h2>Why FlowPay?</h2>
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <span class="benefit-number">$500K+</span>
+            <span class="benefit-label">FedNow transfer limit</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-number">&lt;10s</span>
+            <span class="benefit-label">Settlement time p99</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-number">&lt;1%</span>
+            <span class="benefit-label">ACH return rate</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-number">99.99%</span>
+            <span class="benefit-label">API uptime SLA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section class="audience">
+      <div class="container">
+        <h2>Built For</h2>
+        <div class="audience-grid">
+          <div class="audience-card">
+            <h3>B2B Platforms</h3>
+            <p>Invoicing, supply chain, vendor payments</p>
+          </div>
+          <div class="audience-card">
+            <h3>Marketplaces</h3>
+            <p>Seller payouts, instant disbursements</p>
+          </div>
+          <div class="audience-card">
+            <h3>Gig Economy</h3>
+            <p>Instant worker payouts</p>
+          </div>
+          <div class="audience-card">
+            <h3>Insurance & Lending</h3>
+            <p>Claims disbursement, loan funding</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Waitlist Section -->
+    <section class="waitlist">
+      <div class="container">
+        <h2>Get Early Access</h2>
+        <p>Join the waitlist for instant bank payments infrastructure</p>
+        <form id="waitlist-form" class="waitlist-form">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Join Waitlist</button>
+        </form>
+        <div id="form-message" class="form-message"></div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 6rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+    opacity: 0.95;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+    margin: 0 0 2rem 0;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-badges {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+  }
+
+  /* Features Section */
+  .features {
+    padding: 5rem 0;
+    background: #f9fafb;
+  }
+
+  .features h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0 0 3rem 0;
+    color: #111827;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.25rem;
+    margin: 0 0 0.75rem 0;
+    color: #111827;
+  }
+
+  .feature-card p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Benefits Section */
+  .benefits {
+    padding: 5rem 0;
+  }
+
+  .benefits h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0 0 3rem 0;
+    color: #111827;
+  }
+
+  .benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .benefit-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+  }
+
+  .benefit-label {
+    font-size: 1rem;
+    color: #6b7280;
+  }
+
+  /* Audience Section */
+  .audience {
+    padding: 5rem 0;
+    background: #f9fafb;
+  }
+
+  .audience h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0 0 3rem 0;
+    color: #111827;
+  }
+
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .audience-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    border: 2px solid #e5e7eb;
+    transition: border-color 0.2s;
+  }
+
+  .audience-card:hover {
+    border-color: #667eea;
+  }
+
+  .audience-card h3 {
+    font-size: 1.25rem;
+    margin: 0 0 0.75rem 0;
+    color: #111827;
+  }
+
+  .audience-card p {
+    color: #6b7280;
+    margin: 0;
+  }
+
+  /* Waitlist Section */
+  .waitlist {
+    padding: 5rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .waitlist h2 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .waitlist p {
+    font-size: 1.125rem;
+    margin: 0 0 2rem 0;
+    opacity: 0.9;
+  }
+
+  .waitlist-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .waitlist-form input {
+    flex: 1;
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    min-width: 250px;
+  }
+
+  .waitlist-form button {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #111827;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .waitlist-form button:hover {
+    background: #1f2937;
+  }
+
+  .form-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    min-height: 1.5rem;
+  }
+
+  .form-message.success {
+    color: #10b981;
+  }
+
+  .form-message.error {
+    color: #ef4444;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .features h2,
+    .benefits h2,
+    .audience h2,
+    .waitlist h2 {
+      font-size: 2rem;
+    }
+
+    .features-grid,
+    .benefits-list,
+    .audience-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('waitlist-form') as HTMLFormElement;
+  const messageDiv = document.getElementById('form-message') as HTMLDivElement;
+  const API_URL = 'https://api.claude-remote.com/api/waitlist';
+
+  form?.addEventListener('submit', async (e: Event) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const email = formData.get('email') as string;
+
+    messageDiv.textContent = 'Submitting...';
+    messageDiv.className = 'form-message';
+
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          projectRepo: 'github.com/Andrejs1979/flowpay',
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        messageDiv.textContent = 'You\'re on the list! We\'ll be in touch soon.';
+        messageDiv.className = 'form-message success';
+        form.reset();
+      } else {
+        messageDiv.textContent = data.message || 'Something went wrong. Please try again.';
+        messageDiv.className = 'form-message error';
+      }
+    } catch (error) {
+      messageDiv.textContent = 'Network error. Please try again.';
+      messageDiv.className = 'form-message error';
+    }
+  });
+</script>
