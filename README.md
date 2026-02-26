@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**Category:** fintech
+**Category:** ai/ml  [was: ai/ml]
 
 **CONFIDENTIAL - Tap2 / CloudMind Inc.** --- | Attribute | Value | 
 
